@@ -24,7 +24,7 @@
 			<version>4.8.2</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
@@ -50,7 +50,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -62,15 +62,24 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	
-	    <sourceDirectory>${basedir}/src</sourceDirectory>
-	    <resources>
-	        <resource>
-	            <directory>${basedir}/src</directory>
-	            <excludes>
-	                <exclude>**/*.java</exclude>
-	            </excludes>
-	        </resource>
-	    </resources>
+
+    <sourceDirectory>${basedir}/src</sourceDirectory>
+    <testSourceDirectory>${basedir}/test</testSourceDirectory>
+
+    <resources>
+        <directory>${basedir}/src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <testResources>
+      <resource>
+        <directory>${basedir}/test</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </testResources>
 	</build>
 </project>
