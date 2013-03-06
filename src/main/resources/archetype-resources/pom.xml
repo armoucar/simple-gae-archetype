@@ -80,19 +80,20 @@
 		<testSourceDirectory>${basedir}/test</testSourceDirectory>
 
 		<resources>
-			<directory>${basedir}/src</directory>
-			<excludes>
-				<exclude>**/*.java</exclude>
-			</excludes>
-		</resource>
-		</resources>
-		<testResources>
 			<resource>
-				<directory>${basedir}/test</directory>
+				<directory>${basedir}/src</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>${basedir}/test</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
 		</testResources>
 	</build>
 </project>
